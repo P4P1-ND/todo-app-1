@@ -8,6 +8,7 @@ const btnCompleted = document.querySelector('.btn-completed')
 const filterBtns = [btnAll, btnActive, btnCompleted]
 const btnClearCompleted = document.querySelector('.btn-clear-completed')
 const todoRemaining = document.querySelector('.todo-remaining')
+const listItem = document.querySelector('.listItem')
 
 let todos = []
 
