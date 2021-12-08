@@ -178,22 +178,28 @@ li {
   color: var(--clr-text-base);
 }
 
-.list-item input:checked + label {
+.list-item input:checked + span {
   color: var(--clr-muted-200);
   text-decoration: line-through;
 }
 
-.list-item:not(:last-child) button {
+.todo-list .list-item button {
   opacity: 0;
   transform: scale(0.7);
   pointer-events: none;
   transition: all 0.5s ease-out;
 }
 
-.list-item:not(:last-child):hover button {
+.todo-list .list-item:hover button {
   opacity: 1;
   transform: scale(1);
   pointer-events: all;
+}
+
+.list-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Styles for the actions */

@@ -63,15 +63,14 @@ renderTodos = (todos) => {
     }
 
     li.innerHTML = `
-      <input
-        type="checkbox"
-        id=item.id
-        class="checkbox"
-        onClick="toggle(${item.id})"
-        ${checked}>
-      <label for="${item.id}">${item.name}</label>
-      <button class="edit-button" onClick = 'editTodo(${item.id})'>Edit</button>
-      <button class="delete-button"  onClick='deleteTodo(${item.id})'><strong>❌ </strong></button>
+      <label>
+        <input onClick="toggle(${item.id})" type="checkbox" ${checked} />
+        <span>${item.name}</span>
+      </label>
+      <div class="list-item-actions">
+        <button class="edit-button" onClick = 'editTodo(${item.id})'>Edit</button>
+        <button class="delete-button"  onClick='deleteTodo(${item.id})'><strong>❌</strong></button>
+      </div>
     `
     // finally add the <li> to the <ul>
     todoItemsList.append(li)
