@@ -44,6 +44,16 @@ renderTodos = (todos) => {
   // clear everything inside <ul> with class=todo-items
   todoItemsList.innerHTML = ''
 
+  if(todos.length === 0) {
+    console.log('yup')
+    const li = document.createElement('li')
+    li.setAttribute('class', 'list-item')
+    li.style.color = 'var(--clr-text-base)'
+    li.innerHTML='No todos'
+    todoItemsList.append(li)
+    return
+  }
+
   let completedCount = 0
 
   // run through each item inside todos
