@@ -157,7 +157,7 @@ btnClearCompleted.addEventListener('click', () => {
   todos = todos.filter((item) => {
     return !item.completed
   })
-  renderTodos(todos)
+  addToLocalStorage(todos)
 })
 
 // function to filter todos
